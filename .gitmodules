@@ -1,0 +1,3 @@
+[submodule "runo-bridge"]
+	path = node-modules/runo-bridge
+	url = https://github.com/andruhon/runo-bridge

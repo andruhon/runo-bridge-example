@@ -1,0 +1,4 @@
+src/addon.cc
+node_modules
+target
+build
