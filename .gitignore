@@ -1,4 +1,5 @@
 src/addon.cc
-node_modules
+node_modules/*
+!node_modules/runo-bridge
 target
 build
