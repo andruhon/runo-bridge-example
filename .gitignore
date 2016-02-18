@@ -3,3 +3,4 @@ node_modules/*
 !node_modules/runo-bridge
 target
 build
+npm-debug.log
