@@ -15,3 +15,6 @@ console.log(addon.get_42(true));
 
 console.log(os.EOL+"get_42(false):");
 console.log(addon.get_42(false));
+
+console.log(os.EOL+"rs_experimental_string(longString):");
+console.log(addon.rs_experimental_string("Looooong string from JS dfsdfsdf sd123456789 JSEOM"));

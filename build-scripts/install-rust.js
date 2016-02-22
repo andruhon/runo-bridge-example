@@ -2,12 +2,18 @@ var fs = require('fs');
 var path = require('path');
 
 var rustBuildDir = path.join('target','release');
+var rustDropBuildDir = path.join('node_modules', 'runo-bridge', 'drop', 'target','release');
 var addonBuildDir = path.join('build','Release');
-var result = fs.readdirSync(rustBuildDir)
-.filter(function(filename){
-  return fs.statSync(path.join(rustBuildDir,filename)).isFile()
-})
-.forEach(function(filename){
-  fs.createReadStream(path.join(rustBuildDir,filename))
-  .pipe(fs.createWriteStream(path.join(addonBuildDir,filename)));
-});
+var copyLibs = function(src, dst) {
+  var result = fs.readdirSync(src)
+  .filter(function(filename){
+    return fs.statSync(path.join(src,filename)).isFile()
+  })
+  .forEach(function(filename){
+    fs.createReadStream(path.join(src,filename))
+    .pipe(fs.createWriteStream(path.join(dst,filename)));
+  });
+};
+
+copyLibs(rustDropBuildDir, addonBuildDir);
+copyLibs(rustBuildDir, addonBuildDir);
