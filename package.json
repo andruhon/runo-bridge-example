@@ -6,9 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "preinstall": "node -v",
-    "runo-bridge": "node ./node_modules/runo-bridge/cli.js",
-    "build-drop": "cd node_modules/runo-bridge/drop && cargo build --release",
-    "build-addon": "npm run build-drop && node-gyp configure && node-gyp build",
+    "runo-bridge": "node ./runo-bridge/cli.js generate src/embed.rs src/addon.cc",
+    "build-addon": "node-gyp configure && node-gyp build",
     "clean-addon": "node-gyp clean",
     "build-rust": "cargo build --release",
     "clean-rust": "cargo clean",
