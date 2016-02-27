@@ -17,7 +17,7 @@ Rust bridge: https://github.com/andruhon/runo-bridge
 
 ##Building
 
-  >npm run runo-bridge
+  >npm run generate-addon
 
   >npm run build
 

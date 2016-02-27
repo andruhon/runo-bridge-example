@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "preinstall": "node -v",
-    "runo-bridge": "node ./runo-bridge/cli.js generate src/embed.rs src/addon.cc",
+    "generate-addon": "runo-bridge generate src/embed.rs src/addon.cc",
     "build-addon": "node-gyp configure && node-gyp build",
     "clean-addon": "node-gyp clean",
     "build-rust": "cargo build --release",
@@ -20,6 +20,7 @@
   "license": "ISC",
   "dependencies": {
     "nan": "^2.2.0",
-    "node-gyp": "^3.2.1"
+    "node-gyp": "^3.2.1",
+    "runo-bridge": "0.0.5"
   }
 }
