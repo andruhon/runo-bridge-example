@@ -18,3 +18,9 @@ console.log(addon.get_42(false));
 
 console.log(os.EOL+"rs_experimental_string(longString):");
 console.log(addon.rs_experimental_string("Looooong string from JS dfsdfsdf sd123456789 JSEOM"));
+
+console.log(os.EOL+"float_multiply_plus2(3.14,2):");
+console.log(addon.float_multiply_plus2(3.14,2));
+
+console.log(os.EOL+"double_multiply_plus2(3.14,2):");
+console.log(addon.double_multiply_plus2(3.14,2));
