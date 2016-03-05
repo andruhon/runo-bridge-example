@@ -3,3 +3,5 @@ node_modules
 target
 build
 npm-debug.log
+Cargo.lock
+.DS_Store
