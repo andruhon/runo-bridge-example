@@ -2,9 +2,7 @@
 
 Generating boilerplate C++ code to call Rust from NodeJS.
 
-WIP. Still very raw prototype.
-
-Rust bridge: https://github.com/andruhon/runo-bridge
+RuNo Rust to NodeJS bridge: https://github.com/andruhon/runo-bridge
 
 ##non NPM dependencies
 
@@ -33,6 +31,10 @@ However in order to build this source code, your rust and C++ compiler should be
   >npm run build
 
 Inspect that works:
+
+  >npm test
+
+  or
 
   >node index.js
 
